@@ -12,10 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5r-s+e_f(uj&y7hpilvhyqvz@bo!76@n@md5&a_h%3i#tvtl&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://catalogofilmesbr.online/', 'localhost']
-
+#ALLOWED_HOSTS = ['https://catalogofilmesbr.online/', 'localhost']
 
 # Application definition
 
@@ -111,6 +110,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Especifique o caminho desejado
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

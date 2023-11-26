@@ -4,6 +4,7 @@ from django.http.response import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.decorators import login_required
 
 def pagina_Inicial(request):
     return render(request, 'paginaInicial/home.html')
@@ -43,6 +44,10 @@ def login(request):
         else:
             return HttpResponse('Usuário ou senha errados')
 
+#@login_required
+#def minha_view_protegida(request):
+#    return render(request, 'catalogo/minha_view_protegida.html')
+
 def usuarios(request):
     novo_usuario = Usuario()
     novo_usuario.nome = request.POST.get('username')
@@ -50,3 +55,5 @@ def usuarios(request):
     novo_usuario.senha = request.POST.get('senha')
     novo_usuario.save()
     
+def pesquisa(request):
+    return render(request, 'pesquisa/pesquisa.html')

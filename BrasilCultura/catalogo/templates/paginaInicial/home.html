@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/inicial.css' %}">
     <script src="{% static 'js/script.js' %}"></script>
+
     <title>Homepage</title>
+
+    <link rel="shortcut icon" href="../../static/icons/popcorn.png" type="image/x-icon">
+
 </head>
 <body>
 <header>
@@ -22,8 +28,17 @@
         <li>genero<li>
         <li>void<li>
         <li>Streaming<li>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+                <button id="searchButton" onclick="searchMovie()">Buscar</button>
+                <ul id="searchResults"></ul>
+            </div>
+
         </ul>
+
     </navbar>
+    
   
 </header>
 <section>
