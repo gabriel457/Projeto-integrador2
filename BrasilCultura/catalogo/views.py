@@ -22,6 +22,12 @@ def cadastro(request):
         if user:
             return HttpResponse(f'Já existe um usuário com esse username {username}')
         
+        user_by_email = User.objects.filter(email=email).first()
+        
+        user_by_email = User.objects.filter(email=email).first()
+        if user_by_email:
+            return HttpResponse(f'Falha no cadastro, tente novamente')
+
         user = User.objects.create_user(username=username, email=email, password=senha)
         user.save()
 
