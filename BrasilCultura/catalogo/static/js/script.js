@@ -68,13 +68,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getStreamingProviders(providers) {
         const results = [];
-        for (const [provider, info] of Object.entries(providers.results)) {
-            if (info.flatrate) {
-                results.push(provider);
+        const streamingInfo = providers.results?.BR; // Altere 'BR' para o código do país desejado, se necessário
+    
+        if (streamingInfo?.flatrate) {
+            for (const provider of streamingInfo.flatrate) {
+                results.push(provider.provider_name);
             }
         }
+    
         return results.length > 0 ? results.join(', ') : 'Não disponível';
-    }
+    }    
 
     // Adicione este evento de clique ao botão
     const searchButton = document.getElementById('searchButton');

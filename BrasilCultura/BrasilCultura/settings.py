@@ -15,10 +15,14 @@ SECRET_KEY = 'django-insecure-5r-s+e_f(uj&y7hpilvhyqvz@bo!76@n@md5&a_h%3i#tvtl&2
 DEBUG = True
 
 #ALLOWED_HOSTS = ['https://catalogofilmesbr.online/', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,6 +34,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -116,3 +121,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Especifique o caminho des
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'pesquisa/pesquisa.html'
+

@@ -60,6 +60,7 @@ def usuarios(request):
     novo_usuario.email = request.POST.get('email')
     novo_usuario.senha = request.POST.get('senha')
     novo_usuario.save()
-    
+
+@login_required
 def pesquisa(request):
     return render(request, 'pesquisa/pesquisa.html')
