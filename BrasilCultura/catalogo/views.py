@@ -9,6 +9,15 @@ from django.contrib.auth.decorators import login_required
 def pagina_Inicial(request):
     return render(request, 'paginaInicial/home.html')
 
+def quem_somos(request):
+    return render(request, 'somos/quem-somos.html')
+
+def breve(request):
+    return render(request, 'breve/embreve.html')
+
+def cinema(request):
+    return render(request, 'cinema/cinema.html')
+
 def cadastro(request):
     if request.method == "GET":
         return render(request,'cadastroUsuario/cadastro.html')

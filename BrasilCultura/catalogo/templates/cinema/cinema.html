@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tex.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <title>Em Cartaz</title>
+</head>
+<body>
+<header>
+
+    <img class='img1' src="{% static 'imgs/08.jpeg'%}" alt="Descrição da Imagem">
+    <navbar class='navbar'>
+      <ul>
+      <a href="{% url 'pagina_inicial' %}" id="home-link">
+          <li> Home<li>
+      </a>
+
+      <a href="{% url 'emcartaz' %}" id="cartaz-link">
+          <li> Em Cartaz<li>
+      </a>
+
+      <a href="{% url 'embreve' %}" id="breve-link">
+          <li>Em Breve <li>
+      </a>
+
+      <a href="{% url 'pesquisa' %}" id="pesquisar-button">
+          <button type="submit">Pesquisar</button>
+      </a>
+
+  <a href="{% url 'login' %}" id="login-link">
+      <button type="submit">Login</button>
+  </a>
+
+ <a href="{% url 'cadastro' %}" id="cadastro-link">
+     <button type="submit">Cadastro</button>
+ </a>
+      </ul>
+  </navbar>
+  
+</header>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/09.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>As Aventuras de Poliana: O Filme</h2>
+    <p class="pi">duração: 2 horas
+      <br>Gêneros: Comédia, Aventura</p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/10.jpeg'%}" alt="" srcset="">
+   </div>
+   <div>
+    <h2>Five Nights at Freddy's - O Pesadelo Sem Fim</h2>
+    <p class="pi">Duração: 1h 50 minutos
+      <br>Gêneros: Terror, Mistério</p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/11.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Ó Paí, Ó 2</h2>
+    <p class="pi">Duração: 1h 30 minutos
+      <br>Gêneros: Comédia, Drama</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/12.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>As marvels</h2>
+    <p class="pi">Duração: 1h 45 minutos
+      <br>Gêneros: Ficção científica, Aventura, Ação</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/13.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Napoleão</h2>
+    <p class="pi">Duração: 2h 38 minutos
+      <br>Gêneros: Drama, História, Guerra</p>
+  </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/14.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Jogos Vorazes: A Cantiga dos Pássaros e das Serpentes</h2>
+    <p class="pi">Duração: 2h 37 minutos
+      <br>Gêneros: Ação, Romance, Drama</p>
+  </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/15.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Feriado Sangrento</h2>
+    <p class="pi">Duração: 1h 46 minutos
+      <br>Gêneros: Terror, Thriller, Mistério</p>
+  </div>
+  </div>
+</section>
+
+
+ 
+ 
+<footer>
+<div class=flex1>
+    <div>
+    </h1>
+     fale com conosco
+ </h1>
+ <p>
+     83962225587
+ </p>
+ <p>
+adorocinema@gmail.com
+</p>
+<a href="{% url 'quem_somos' %}"> <p>
+    Quem Somos
+    </p>
+</a>
+ </div>
+
+ <div>
+
+    </h1>
+    SÉRIES E TV
+    </h1>
+    <a href="https://www.youtube.com/watch?v=96xJZreCCOA&list=PLgIp41iyPquSNhMAHJ3V3vNb-QDOsUmd6">
+    <p>
+    teen wolf
+    </p>
+    </a>
+    <a href="https://www.youtube.com/results?search_query=la+casa+de+papel+temporada+1">
+    <p>
+    la casa de papel
+    </p>
+    </a>
+    <a href="https://www.youtube.com/results?search_query=sintonia+s%C3%A9rie+">
+    <p>
+    sintonia
+        </p>
+        </a>
+        <a href="ttps://www.youtube.com/results?shearch_query=lupin">
+    <p>
+       lupin
+         </p>
+         </a>
+         <a href="https://recordtv.r7.com/">
+         <p>
+          Record
+              </p>
+            </a>
+              <a href="https://www.sbt.com.br/home">
+              <p>
+                sbt
+                    </p>
+                  </a>
+        <a href="https://jovempan.com.br/">
+            <p>
+             joven pan
+                </p>
+             
+        </a>
+        <a href="https://bandnewstv.uol.com.br/">   
+    <p>
+        Band news
+   </p>
+  </a>
+</div>
+<div>
+</h1>
+ STREAMING
+</h1>
+
+    <a target="_blank" href="https://www.amazon.com.br/prime?tag=msndesktopsta-20&hvadid=&hvpos=&hvexid={aceid}&hvnetw=o&hvrand=&hvpone=&hvptwo=&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=677&hvtargid=kwd-71262649251523:loc-20&ref=pd_sl_1gc7rqp4n5_e">
+        <P>
+        amazon prime
+        </p>
+    </a>
+
+        <a href="https://www.netflix.com/br/">
+            <p>
+            netflix
+            </p>
+        </a>
+        <a href="https://www.hbomax.com/br/pt">
+<p>
+    hbo max
+    </p>
+  </a>
+    <a href="https://www.warnerbros.com.br/"></a>
+        <p>
+    <p>
+        warne bros
+    </p>
+  </a>
+    <a href="tarplus.com/pt-br?gclid=80fe2e9f199b159d334f4bc188faf630&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000086290799&s_kwcid=AL!8468!10!79302445942308!star%20plus&msclkid=80fe2e9f199b159d334f4bc188faf630"></a>
+    <p>
+    </a>
+    <p>
+        star-plus
+    </p>
+</div>
+
+<div>
+</h1>
+ Filmes
+</h1>
+
+<p>
+    Nos cinemas
+</p>
+
+<p>
+    Em breve
+</p>
+
+<a href="https://cinema10.com.br/generos/curta-metragem#google_vignette">
+  <p>
+    curta metragens
+  </p>
+</a>
+</div>
+ 
+</div>
+</footer>
+
+</section>
+
+<script src="{% static 'js/cinema.js' %}"></script>
+
+</body>
+</html>

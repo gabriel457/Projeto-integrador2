@@ -16,24 +16,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 const searchResults = document.getElementById('searchResults');
                 if (data.results.length > 0) {
                     const movieId = data.results[0].id; // Obtemos o ID do filme
-                    return Promise.all([
-                        fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=pt-BR&append_to_response=credits`),
-                        fetch(`https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${apiKey}`)
-                    ]);
+                    return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=pt-BR&append_to_response=credits,genres`);
                 } else {
                     // Exemplo: Informar que nenhum resultado foi encontrado
                     searchResults.innerHTML = '<p>Nenhum resultado encontrado.</p>';
                 }
             })
-            .then(([movieResponse, providersResponse]) => Promise.all([movieResponse.json(), providersResponse.json()]))
-            .then(([movie, providers]) => {
-                // Exiba as informações detalhadas do filme
+            .then(movieResponse => movieResponse.json())
+            .then(movie => {
+                // Exiba as informações detalhadas do filme, incluindo duração e gêneros
                 const title = movie.title;
                 const releaseDate = formatBrazilianDate(movie.release_date); // Formatar a data
                 const director = getDirector(movie);
                 const actors = getActors(movie);
                 const overview = movie.overview;
-                const streamingProviders = getStreamingProviders(providers);
+                const genres = getGenres(movie);
+                const duration = getDuration(movie);
 
                 // Exemplo: Exibir informações na página
                 const searchResults = document.getElementById('searchResults');
@@ -42,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p><strong>Ano de Lançamento:</strong> ${releaseDate}</p>
                     <p><strong>Diretor:</strong> ${director}</p>
                     <p><strong>Atores:</strong> ${actors.join(', ')}</p>
+                    <p><strong>Gêneros:</strong> ${genres.join(', ')}</p>
+                    <p><strong>Duração:</strong> ${duration} minutos</p>
                     <p><strong>Resumo:</strong> ${overview}</p>
-                    <p><strong>Disponível em:</strong> ${streamingProviders}</p>
                 `;
             })
             .catch(error => {
@@ -66,18 +65,23 @@ document.addEventListener('DOMContentLoaded', function () {
         return actors.map(actor => actor.name);
     }
 
-    function getStreamingProviders(providers) {
-        const results = [];
-        const streamingInfo = providers.results?.BR; // Altere 'BR' para o código do país desejado, se necessário
+    function getGenres(movie) {
+        const genres = movie.genres || [];
+        return genres.map(genre => genre.name);
+    }
+
+    function getDuration(movie) {
+        const durationInMinutes = movie.runtime;
+        
+        if (durationInMinutes) {
+            const hours = Math.floor(durationInMinutes / 60);
+            const minutes = durationInMinutes % 60;
     
-        if (streamingInfo?.flatrate) {
-            for (const provider of streamingInfo.flatrate) {
-                results.push(provider.provider_name);
-            }
+            return `${hours}h ${minutes}min`;
+        } else {
+            return 'Não disponível';
         }
-    
-        return results.length > 0 ? results.join(', ') : 'Não disponível';
-    }    
+    }
 
     // Adicione este evento de clique ao botão
     const searchButton = document.getElementById('searchButton');

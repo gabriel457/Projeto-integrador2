@@ -1,0 +1,25 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+body{
+  background-color: white;
+  background: white;
+}
+.flex23{
+display: grid;
+  
+grid-template-columns: 1fr 1fr;
+ 
+}.img23{
+  width: 50%;
+
+}
+.pi{
+  color: black;
+  margin-top: 120px;
+}
+img{
+  width: 50%;
+  padding-left: 240px;
+}

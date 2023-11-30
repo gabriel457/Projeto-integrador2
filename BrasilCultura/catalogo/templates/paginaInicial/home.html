@@ -4,100 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/inicial.css' %}">
-    <script src="{% static 'js/script.js' %}"></script>
-
+    
+    <link rel="stylesheet" href="{% static 'css/tex.css' %}">
     <title>Homepage</title>
 
     <link rel="shortcut icon" href="../../static/icons/popcorn.png" type="image/x-icon">
-
 </head>
 <body>
 <header>
 
-    <img class='img1' src="{% static 'img/08.jpeg'%}" alt="Descrição da Imagem">
+    <img class='img1' src="{% static 'imgs/08.jpeg'%}" alt="Descrição da Imagem">
     <navbar class='navbar'>
         <ul>
-        <li>Home<li>
-        <li>criticas<li>
-        <li>em cinema<li>
-        <li>em breve<li>
-        <li>genero<li>
-        <li>void<li>
-        <li>Streaming<li>
+        <a href="{% url 'pagina_inicial' %}" id="home-link">
+            <li> Home<li>
+        </a>
 
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Pesquisar...">
-                <button id="searchButton" onclick="searchMovie()">Buscar</button>
-                <ul id="searchResults"></ul>
-            </div>
+        <a href="{% url 'emcartaz' %}" id="cartaz-link">
+            <li> Em Cartaz<li>
+        </a>
 
+        <a href="{% url 'embreve' %}" id="breve-link">
+            <li>Em Breve <li>
+        </a>
+
+        <a href="" id="pesquisar-button">
+            <button type="submit">Pesquisar</button>
+        </a>
+
+    <a href="" id="login-link">
+        <button type="submit">Login</button>
+    </a>
+
+   <a href="" id="cadastro-link">
+       <button type="submit">Cadastro</button>
+   </a>
         </ul>
-
     </navbar>
-    
   
 </header>
 <section>
     <div class='flex'>
         <div> 
-            <img class='img' src="{% static 'img/01.jpeg'%}" alt="Descrição da Imagem">
+            <img class='img' src="{% static 'imgs/01.jpeg'%}" alt="Descrição da Imagem">
         </div>
         <div> 
-            <img class='img' src="{% static 'img/download.jpeg'%}" alt="Descrição da Imagem">
+            <img class='img' src="{% static 'imgs/download.jpeg'%}" alt="Descrição da Imagem">
         </div>
         <div> 
-            <img class='img' src="{% static 'img/02.jpeg'%}" alt="Descrição da Imagem">
+            <img class='img' src="{% static 'imgs/02.jpeg'%}" alt="Descrição da Imagem">
         </div>
         <div> 
-            <img class='img' src="{% static 'img/03.jpeg'%}" alt="Descrição da Imagem">
+            <img class='img' src="{% static 'imgs/03.jpeg'%}" alt="Descrição da Imagem">
         </div>
-        <div> 
-            <img class='img' src="{% static 'img/04.jpeg'%}" alt="Descrição da Imagem">
+        <div>
+            <h2 class='fonts'>
+             1. O auto da compadecida
+            </h2>
+            <iframe width="360" height="315" src="https://www.youtube.com/embed/XPuMu_ENzlg?si=raQXEJYiPdU6B_76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>
+                As aventuras dos nordestinos João Grilo, um sertanejo pobre e mentiroso, e Chicó, o mais covarde dos homens. Ambos lutam pelo pão de cada dia e atravessam por vários episódios enganando a todos do pequeno vilarejo de Taperoá, no sertão da Paraíba. A salvação da dupla acontece com a aparição da Nossa Senhora. Adaptação da obra de Ariano Suassuna.
+            </p>
         </div>
-        <div> 
-            <img class='img' src="{% static 'img/05.jpeg'%}" alt="Descrição da Imagem">
-        </div>
-        <div> 
-            <img class='img' src="{% static 'img/06.jpeg'%}" alt="Descrição da Imagem">
-        </div>
-        <div> 
-            <img class='img' src="{% static 'img/07.jpeg'%}" alt="Descrição da Imagem">
-        </div>
-    </div>
-</section>
-<section>
-    <h1 class='destaque'>Destaque dessa semana</h1>
-    <div class='margin' >
-      <div>
-       <h2 class='fonts'>
-        1. Alta da Compadecida
-       </h2>
-        <iframe width="260" height="315" src="https://www.youtube.com/embed/DN_OwWRHU5U?si=Te741UV7Lgk-ovD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p>
-
-        </p>
-    </div>
       <div>
         <h2 class='fonts'>
          2. Ataque dos Vermes Malditos
         </h2>
         <iframe width="360" height="315" src="https://www.youtube.com/embed/1KyEbIdeLK4?si=G1FHiz8AQB6Wbb2O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <p>
-
+            <br>Um casal habitante de uma pequena cidade esquecida no deserto luta pela sua sobrevivência <br> e para salvar o mundo do ataque de minhocas gigantes e carnívoras que vivem debaixo do solo.
         </p>
     </div>
     <div>
         <h2 class='fonts'>
-         3. shaolin do sertao
+         3. Shaolin do Sertao
         </h2>
-        <iframe width="260" height="315" src="https://www.youtube.com/embed/XuzSIm3ZLXU?si=lex8AgGkv9GGpjwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>
-
-    </p>
+        <iframe width="360" height="315" src="https://www.youtube.com/embed/XuzSIm3ZLXU?si=lex8AgGkv9GGpjwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>
+            Na década de 1980, Aluízio Li é obcecado por filmes de artes marciais. Morando no interior do Ceará, ele vê seu mundo lúdico e inocente em xeque quando um lutador profissional aposentado resolve desafiar todos os valentões da cidade. 
+        </p>
     </div>
     <div>
         <h2 class='fonts'>
@@ -105,66 +90,167 @@
         </h2>
          <iframe width="360" height="315" src="https://www.youtube.com/embed/b25yHLzdn7g?si=1E7CwZ07bBft9y2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p>
-
-    </p>
+        Sam Wheat é um jovem executivo apaixonado por sua namorada, Molly. Ele acaba morto em um assalto, mas seu espírito não vai para o outro plano e descobre que Molly também corre perigo. Para salvá-la, Sam pede ajuda a uma médium que consegue ouvi-lo.
+    </P>
     </div>
     <div>
         <h2 class='fonts'>
           5.Barbie
         </h2>
         <iframe width="360" height="315" src="https://www.youtube.com/embed/Ujs1Ud7k49M?si=y6PASDfNqJ69mVoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>
-
-    </p>
+        <p>
+            Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.
+        </p>   
     </div>
     <div>
         <h2 class='fonts'>
           6.Big hero
         </h2>
         <iframe width="360" height="315" src="https://www.youtube.com/embed/Zx3xEc6-mU4?si=lSIytwhPSR3IcrlD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>
-
-    </p>
+        <p>
+            O grande robô inflável está sempre a postos para cuidar de Hiro Hamada. Quando algo devastador assola a cidade, o menino prodígio, seus amigos e o robô formam um grupo de heróis para combater o mal.
+        </P>
     </div>
     <div>
         <h2 class='fonts'>
           7.Megan
         </h2>
         <iframe width="360" height="315" src="https://www.youtube.com/embed/JcKRaUGJcqY?si=g6yd30qAzTHta__k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>
-
-    </p>
+        <p>
+            M3GAN é uma maravilha da inteligência artificial, uma boneca realista programada para ser a melhor amiga de uma criança. Uma robótica brilhante dá a sua jovem sobrinha um protótipo M3GAN, mas a máquina logo se torna violenta.    
+        </P>    
     </div>
     <div>
         <h2 class='fonts'>
           8.Avenue 5 
         </h2>
         <iframe width="360" height="315" src="https://www.youtube.com/embed/xxMv8pPN8Po?si=7d8vOIN3gKiF3T_h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p>
-
-    </p>
+        <p>
+            Um capitão de navio de cruzeiro espacial confiante, controlado e gentil tenta se dar bem com todos.
+        </P>    
     </div>
 </div>
 <footer>
-<div class=flex>
+<div class=flex1>
     <div>
-    </h2>
+    </h1>
      fale com conosco
- </h2>
+ </h1>
  <p>
      83962225587
  </p>
+ <p>
+adorocinema@gmail.com
+</p>
+<a href="{% url 'quem_somos' %}"> <p>
+    Quem Somos
+    </p>
+</a>
  </div>
+
  <div>
-    <img class='img2' src="../../static/imgs/insta.webp" alt="Descrição da Imagem">
- </div>
- <div>
-    <img class='img2' src="../../static/imgs/whats.webp" alt="Descrição da Imagem">
- </div>
+</h1>
+SÉRIES E TV
+</h1>
+teen wolf
+<p>
+<a href="https://www.youtube.com/watch?v=96xJZreCCOA&list=PLgIp41iyPquSNhMAHJ3V3vNb-QDOsUmd6">
+</p>
+<a href="https://www.youtube.com/results?search_query=la+casa+de+papel+tempo">
+<p>
+la casa de papel
+</p>
+<a href="https://www.youtube.com/results?search_query=sintonia+s%C3%A9rie+">
+<p>
+   sintonia
+    </p>
+    <a href="https://www.youtube.com/results?search_query=lupin">
+    <p>
+       lupin
+         </p>
+         <a href="https://recordtv.r7.com/">
+         <p>
+          Record
+              </p>
+              <a href="https://www.sbt.com.br/home">
+              <p>
+                sbt
+           
+            </p>
+            
+            <a href="https://jovempan.com.br/">  
+        <p>
+         joven pan
+    </p>
+    
+    <a href="https://bandnewstv.uol.com.br/">
+        
+    <p>
+        Band news
+   </p>
+</div>
+<div>
+</h1>
+ STREAMING
+</h1>
+    <a href="https://www.amazon.com.br/prime?tag=msndesktopsta-20&hvadid=&hvpos=&hvexid={aceid}&hvnetw=o&hvrand=&hvpone=&hvptwo=&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=677&hvtargid=kwd-71262649251523:loc-20&ref=pd_sl_1gc7rqp4n5_e">
+        <p>
+        amazon prime
+        </p>
+    </a>
+
+<a href="https://www.netflix.com/br/">
+    <p>
+    netflix
+    </p>
+</a>
+<a href="https://www.hbomax.com/br/pt">
+    <p>
+        hbo max
+        </p>
+</a>
+    <a href="https://www.warnerbros.com.br/">
+        <p>
+            warne bros
+        </p>
+    </a>
+
+    <a href="tarplus.com/pt-br?gclid=80fe2e9f199b159d334f4bc188faf630&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000086290799&s_kwcid=AL!8468!10!79302445942308!star%20plus&msclkid=80fe2e9f199b159d334f4bc188faf630">
+        <p>
+            star-plus
+        </p>
+    </a>
+</div>
+
+<div>
+</h1>
+ Filmes
+</h1>
+<p>
+todos
+</p>
+<p>
+estrelas
+</p>
+<p>
+    Nos cinemas
+</p>
+
+<p>
+    Em breve
+</p>
+
+<a href="https://cinema10.com.br/generos/curta-metragem#google_vignette">
+  <p>
+    curta metragens
+  </p>
+</div>
+ 
 </div>
 </footer>
 
 </section>
 
+<script src="{% static 'js/home.js' %}"></script>
 </body>
 </html>

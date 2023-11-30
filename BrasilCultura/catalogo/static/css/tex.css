@@ -1,0 +1,149 @@
+ul, li {
+    list-style: none;
+    display: inline-flex;
+    padding: 2px;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+header {
+    background-color: black;
+    margin-left: -10px;
+    width: 98.9vw;
+    margin-top: -10px;
+    height: 150px;
+    position: relative;
+}
+
+.flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.img {
+    width: 80%;
+    border-radius: 30px;
+}
+
+body {
+    background: linear-gradient(to right,  #8A2BE2, #000000);
+    overflow-x: hidden;
+}
+
+.img1 {
+    width: 10%;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.navbar {
+    margin-top: -500px;
+}
+
+h1::after, h1::before {
+    content: '';
+    display: inline-block;
+    width: 10px; /* Ajuste a largura conforme necessário */
+    height: 10px; /* Ajuste a altura conforme necessário */
+    background-color: yellow; /* Cor de destaque */
+    margin-left: 5px; /* Espaçamento entre os botões */
+}
+
+h1::after {
+    content: '>';
+    padding-left: 10px;
+    padding-top: 40px;
+}
+
+h1::before {
+    content: '<';
+    padding-right: 10px;
+    padding-top: 40px;
+}
+
+.fonts {
+    font-weight: bolder;
+}
+
+.destaque {
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.margin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    margin-left: -10px;
+    padding-left: 10px;
+    height: 60vh;
+    margin-bottom: -10px;
+    width: 98vw;
+}
+
+.img2 {
+    width: 15%;
+    margin-bottom: -30px;
+}
+
+.flex1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+    color: white;
+}
+
+a:hover {
+    background-color: blue;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Adicionando estilo aos botões */
+#pesquisar-button, #login-link, #cadastro-link {
+    padding-left: 20px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#pesquisar-button button, #login-link button, #cadastro-link button {
+    background-color: black; /* Cor de destaque para os botões */
+    color: white; /* Cor do texto nos botões */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    font-size: 1.2rem; 
+}
+
+#pesquisar-button button:hover, #login-link button:hover, #cadastro-link button:hover {
+    background-color: blue; /* Cor de destaque ao passar o mouse */
+}

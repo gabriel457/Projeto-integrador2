@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tex.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <title>homepage</title>
+</head>
+<body>
+<header>
+
+    <img class='img1' src="{% static 'imgs/08.jpeg'%}" alt="Descrição da Imagem">
+    <navbar class='navbar'>
+      <ul>
+      <a href="{% url 'pagina_inicial' %}" id="home-link">
+          <li> Home<li>
+      </a>
+
+      <a href="{% url 'emcartaz' %}" id="cartaz-link">
+          <li> Em Cartaz<li>
+      </a>
+
+      <a href="{% url 'embreve' %}" id="breve-link">
+          <li>Em Breve <li>
+      </a>
+
+      <a href="{% url 'pesquisa' %}" id="pesquisar-button">
+          <button type="submit">Pesquisar</button>
+      </a>
+
+  <a href="{% url 'login' %}" id="login-link">
+      <button type="submit">Login</button>
+  </a>
+
+ <a href="{% url 'cadastro' %}" id="cadastro-link">
+     <button type="submit">Cadastro</button>
+ </a>
+      </ul>
+  </navbar>
+  
+</header>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/16.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Medo profundo</h2>
+    <p class="pi">duração: 1h 29m
+      <br>Presas nas profundezas do oceano e cercadas por tubarões-brancos, duas irmãs precisam lutar contra o tempo para permanecer vivas. No entanto, elas têm apenas uma hora de oxigênio e as chances se tornam cada vez menores com os predadores rondando.</p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/17.jpeg'%}" alt="" srcset="">
+   </div>
+   <div>
+    <h2>Dune</h2>
+    <p class="pi">duração: 2h 35m
+      <br>Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático. Paul Atreides é um jovem cuja família toma o controle do planeta deserto Arrakis, também conhecido como Duna. A única fonte da especiaria Melange, a substância mais importante do cosmos, Arrakis se mostra ser um planeta nem um pouco fácil de governar.</p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/18.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Wonka</h2>
+    <p class="pi">duração: 1h 56m
+      <br>A história se concentra em um jovem Willy Wonka e como ele conheceu os Oompa-Loompas.</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/19.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Sorria</h2>
+    <p class="pi">duração: 1h 55m
+      <br>Após um paciente cometer um suicídio brutal em sua frente, a psiquiatra Rose é perseguida por uma entidade maligna que muda de forma. Enquanto tenta escapar desse pesadelo, Rose também precisa enfrentar seu passado conturbado para sobreviver.</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/20.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>A fuga das galinhas: A ameaça dos nuggets</h2>
+    <p class="pi">duração: 1h 24m
+      <br>No galinheiro de uma fazenda inglesa dos anos 1950, galinhas cumprem sua função e vivem pacatamente sonhando com uma vida melhor. Uma delas, Ginger, sonha com a liberdade e planeja sair voando dali junto com suas companheiras.</p>
+  </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/21.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Divertida mente 2</h2>
+    <p class="pi">duração: 1h 35m
+      <br>Divertida Mente 2, da Disney e da Pixar, retorna à mente da recém adolescente Riley no momento em que a sala de controle está passando por uma demolição repentina para dar lugar a algo totalmente inesperado: novas Emoções! Alegria, Tristeza, Raiva, Medo e Nojinho, que há muito tempo administram uma operação bem-sucedida em todos os aspectos, não têm certeza de como se sentir quando a Ansiedade aparece. E parece que ela não está sozinha.</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/22.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Wish: O poder dos desejos</h2>
+    <p class="pi">duração: 1h 35m
+      <br>No reino mágico de Rosas, Asha é uma moça perspicaz que faz um desejo tão poderoso que é atendido por uma força cósmica: uma pequena esfera de energia ilimitada chamada Star. Juntas, Asha e Star enfrentam o Rei Magnifico pra salvar a comunidade e provar que, quando um ser humano se une à energia das estrelas, coisas maravilhosas podem acontecer.</p>
+  </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/23.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Mamonas Assasinas O Filme</h2>
+    <p class="pi">duração: 2 horas
+      <br>Estamos em Guarulhos na década de 90. Dinho, Sérgio, Samuel, Julio e Bento são garotos típicos da época com pouco dinheiro e muitos sonhos. Eles nem imaginam que o humor debochado e inteligente, tão característico do grupo de amigos, irá mudar suas vidas para sempre. De algumas tentativas fracassadas ao sucesso absoluto, em pouco tempo, eles se tornaram o maior fenômeno musical brasileiro da década: os Mamonas Assassinas.</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/24.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Lorem Ipsum</h2>
+    <p class="pi">duração: 2 horas
+      <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/25.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Aquaman 2: O Reino Perdido</h2>
+    <p class="pi">duração: 1h 55m
+      <br>Quando um poder antigo é liberado, Aquaman deve forjar uma aliança inquieta com um aliado improvável para proteger Atlântida, e o mundo, de uma devastação irreversível.</p>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex23">
+   <div>
+    <img src="{% static 'imgs/26.jpeg'%}" alt="" srcset="">
+   </div>
+   <div><h2>Nosso Lar 2: Os Mensageiros</h2>
+    <p class="pi">duração: 1h 45m
+      <br>Cinco espíritos de Nosso Lar vêm à Terra em missão de resgate de projetos de vidas que correm perigo. Médico cuja história foi base do primeiro filme, André Luiz junta-se ao grupo liderado pelo mentor Aniceto.</p>
+  </div>
+  </div>
+</section>
+ 
+ 
+<footer>
+<div class=flex1>
+    <div>
+    </h1>
+     fale com conosco
+ </h1>
+ <p>
+     83962225587
+ </p>
+ <p>
+adorocinema@gmail.com
+</p>
+<a href="{% url 'quem_somos' %}"> <p>
+    Quem Somos
+    </p>
+</a>
+ </div>
+
+ <div>
+
+    </h1>
+    SÉRIES E TV
+    </h1>
+    <a href="https://www.youtube.com/watch?v=96xJZreCCOA&list=PLgIp41iyPquSNhMAHJ3V3vNb-QDOsUmd6">
+    <p>
+    teen wolf
+    </p>
+    </a>
+    <a href="https://www.youtube.com/results?search_query=la+casa+de+papel+temporada+1">
+    <p>
+    la casa de papel
+    </p>
+    </a>
+    <a href="https://www.youtube.com/results?search_query=sintonia+s%C3%A9rie+">
+    <p>
+    sintonia
+        </p>
+        </a>
+        <a href="ttps://www.youtube.com/results?shearch_query=lupin">
+    <p>
+       lupin
+         </p>
+         </a>
+         <a href="https://recordtv.r7.com/">
+         <p>
+          Record
+              </p>
+            </a>
+              <a href="https://www.sbt.com.br/home">
+              <p>
+                sbt
+                    </p>
+                  </a>
+        <a href="https://jovempan.com.br/">
+            <p>
+             joven pan
+                </p>
+             
+        </a>
+        <a href="https://bandnewstv.uol.com.br/">   
+    <p>
+        Band news
+   </p>
+  </a>
+</div>
+<div>
+</h1>
+ STREAMING
+</h1>
+
+    <a target="_blank" href="https://www.amazon.com.br/prime?tag=msndesktopsta-20&hvadid=&hvpos=&hvexid={aceid}&hvnetw=o&hvrand=&hvpone=&hvptwo=&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=677&hvtargid=kwd-71262649251523:loc-20&ref=pd_sl_1gc7rqp4n5_e">
+        <P>
+        amazon prime
+        </p>
+    </a>
+
+        <a href="https://www.netflix.com/br/">
+            <p>
+            netflix
+            </p>
+        </a>
+        <a href="https://www.hbomax.com/br/pt">
+<p>
+    hbo max
+    </p>
+  </a>
+    <a href="https://www.warnerbros.com.br/"></a>
+        <p>
+    <p>
+        warne bros
+    </p>
+  </a>
+    <a href="tarplus.com/pt-br?gclid=80fe2e9f199b159d334f4bc188faf630&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000086290799&s_kwcid=AL!8468!10!79302445942308!star%20plus&msclkid=80fe2e9f199b159d334f4bc188faf630"></a>
+    <p>
+    </a>
+    <p>
+        star-plus
+    </p>
+</div>
+
+<div>
+</h1>
+ Filmes
+</h1>
+
+<p>
+    Nos cinemas
+</p>
+
+<p>
+    Em breve
+</p>
+
+<a href="https://cinema10.com.br/generos/curta-metragem#google_vignette">
+  <p>
+    curta metragens
+  </p>
+</a>
+</div>
+ 
+</div>
+</footer>
+
+</section>
+</body>
+</html>
