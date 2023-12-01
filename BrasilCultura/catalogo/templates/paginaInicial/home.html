@@ -16,29 +16,29 @@
     <img class='img1' src="{% static 'imgs/08.jpeg'%}" alt="Descrição da Imagem">
     <navbar class='navbar'>
         <ul>
-        <a href="{% url 'pagina_inicial' %}" id="home-link">
-            <li> Home<li>
-        </a>
-
-        <a href="{% url 'emcartaz' %}" id="cartaz-link">
-            <li> Em Cartaz<li>
-        </a>
-
-        <a href="{% url 'embreve' %}" id="breve-link">
-            <li>Em Breve <li>
-        </a>
-
-        <a href="" id="pesquisar-button">
-            <button type="submit">Pesquisar</button>
-        </a>
-
-    <a href="" id="login-link">
-        <button type="submit">Login</button>
-    </a>
-
-   <a href="" id="cadastro-link">
-       <button type="submit">Cadastro</button>
-   </a>
+            <a href="{% url 'pagina_inicial' %}" id="home-link">
+                <li> Home<li>
+            </a>
+    
+            <a href="{% url 'emcartaz' %}" id="cartaz-link">
+                <li> Em Cartaz<li>
+            </a>
+    
+            <a href="{% url 'embreve' %}" id="breve-link">
+                <li>Em Breve <li>
+            </a>
+    
+            <a href="{% url 'pesquisa' %}" id="pesquisar-link">
+                <li>Pesquisar</li>
+            </a>
+    
+            <a href="{% url 'login' %}" id="login-link">
+                <li>Login</li>
+            </a>
+    
+            <a href="{% url 'cadastro' %}" id="cadastro-link">
+                <li>Cadastro</li>
+            </a>
         </ul>
     </navbar>
   

@@ -107,12 +107,14 @@ p {
     color: white;
 }
 
-a:hover {
-    background-color: blue;
-    margin-right: 10px;
-    border-radius: 20px;
-    padding: 10px;
-    display: inline-block;
+.navbar a, .navbar button {
+    color: white;
+    text-decoration: none; /* Remova o sublinhado dos links, se desejar */
+}
+
+.navbar a, .navbar button:hover {
+    color: white;
+    text-decoration: none; /* Remova o sublinhado dos links, se desejar */
 }
 
 a {
@@ -122,28 +124,6 @@ a {
     padding: 10px;
 }
 
-/* Adicionando estilo aos botões */
-#pesquisar-button, #login-link, #cadastro-link {
-    padding-left: 20px;
-    margin-left: 10px;
-    font-size: 1.3rem;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-#pesquisar-button button, #login-link button, #cadastro-link button {
-    background-color: black; /* Cor de destaque para os botões */
-    color: white; /* Cor do texto nos botões */
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 150px;
-    font-size: 1.2rem; 
-}
 
-#pesquisar-button button:hover, #login-link button:hover, #cadastro-link button:hover {
-    background-color: blue; /* Cor de destaque ao passar o mouse */
-}
+
