@@ -22,7 +22,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .img {
@@ -38,12 +38,13 @@ body {
 .img1 {
     width: 10%;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: -200px;
 }
 
 .navbar {
-    margin-top: -500px;
+    margin-bottom: -500px;
 }
+
 
 h1::after, h1::before {
     content: '';
@@ -107,14 +108,12 @@ p {
     color: white;
 }
 
-.navbar a, .navbar button {
+.navbar a {
     color: white;
-    text-decoration: none; /* Remova o sublinhado dos links, se desejar */
-}
-
-.navbar a, .navbar button:hover {
-    color: white;
-    text-decoration: none; /* Remova o sublinhado dos links, se desejar */
+    text-decoration: none;
+    padding: 10px 20px; /* Ajuste o espaçamento conforme necessário */
+    display: flex;
+    align-items: center; /* Centralize verticalmente */
 }
 
 a {

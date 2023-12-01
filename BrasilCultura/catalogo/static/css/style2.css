@@ -1,14 +1,11 @@
-*{
-margin: 0px;
-padding: 0px;
-}
+
 body{
   background-color: white;
   background: white;
 }
 .flex23{
 display: grid;
-  
+padding-top: 20px;
 grid-template-columns: 1fr 1fr;
  
 }.img23{
