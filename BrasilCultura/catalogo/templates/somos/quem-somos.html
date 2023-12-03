@@ -10,34 +10,28 @@
 <body>
 <header>
 
-    <img class='img1' src="{% static 'imgs/08.jpeg'%}" alt="Descrição da Imagem">
-    <navbar class='navbar'>
-        <ul>
-        <a href="{% url 'pagina_inicial' %}" id="home-link">
-            <li> Home<li>
-        </a>
+    <nav>
+        <img class='img1' src="{% static 'imgs/logo.png'%}" alt="Descrição da Imagem">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="{% url 'pagina_inicial' %}">Home</a></li>
+          <li><a href="{% url 'emcartaz' %}">Em Cartaz</a></li>
+          <li><a href="{% url 'embreve' %}">Em breve</a></li>
+          <li><a href="{% url 'pesquisa' %}">Pesquisar</a></li>
+          <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li style="color: white;">Bem-vindo, {{ user.username }}!</li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+          {% endif %}
 
-        <a href="{% url 'emcartaz' %}" id="cartaz-link">
-            <li> Em Cartaz<li>
-        </a>
-
-        <a href="{% url 'embreve' %}" id="breve-link">
-            <li>Em Breve <li>
-        </a>
-
-        <a href="{% url 'login' %}" id="pesquisar-button">
-            <button type="submit">Pesquisar</button>
-        </a>
-
-    <a href="{% url 'login' %}" id="login-link">
-        <button type="submit">Login</button>
-    </a>
-
-   <a href="{% url 'cadastro' %}" id="cadastro-link">
-       <button type="submit">Cadastro</button>
-   </a>
         </ul>
-    </navbar>
+      </nav>
   
 </header>
 <section>

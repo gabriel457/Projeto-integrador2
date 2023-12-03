@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def pagina_Inicial(request):
     return render(request, 'paginaInicial/home.html')
@@ -40,7 +41,7 @@ def cadastro(request):
         user = User.objects.create_user(username=username, email=email, password=senha)
         user.save()
 
-        return HttpResponse(f'Usuário {username} cadastrado e autenticado com sucesso.')
+        return render(request, 'login/login.html')
 
 class CustomLoginView(LoginView):
     template_name = 'paginaInicial/home.html'
@@ -55,7 +56,7 @@ def login(request):
         user = authenticate(username=username, password=senha)
 
         if user:
-            return render(request, 'paginaInicial/home.html')
+            return render(request, 'paginaInicial/home.html', {'user': user})
         else:
             return HttpResponse('Usuário ou senha errados')
 
@@ -70,6 +71,6 @@ def usuarios(request):
     novo_usuario.senha = request.POST.get('senha')
     novo_usuario.save()
 
-@login_required
+#@login_required
 def pesquisa(request):
     return render(request, 'pesquisa/pesquisa.html')

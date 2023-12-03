@@ -12,35 +12,28 @@
 </head>
 <body>
 <header>
+  <nav>
+    
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a href="{% url 'pagina_inicial' %}">Home</a></li>
+      <li><a href="{% url 'emcartaz' %}">Em Cartaz</a></li>
+      <li><a href="{% url 'embreve' %}">Em breve</a></li>
+      <li><a href="{% url 'pesquisa' %}">Pesquisar</a></li>
+      <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+      <li style="color: white;">Bem-vindo, {{ user.username }}!</li>
+      {% else %}
+      <li><a href="{% url 'login' %}">Login</a></li>
+      {% endif %}
 
-  <img class='img1' src="{% static 'imgs/logo.png'%}" alt="Descrição da Imagem">
-  <navbar class='navbar'>
-      <ul>
-          <a href="{% url 'pagina_inicial' %}" id="home-link">
-              <li> Home<li>
-          </a>
-  
-          <a href="{% url 'emcartaz' %}" id="cartaz-link">
-              <li> Em Cartaz<li>
-          </a>
-  
-          <a href="{% url 'embreve' %}" id="breve-link">
-              <li>Em Breve <li>
-          </a>
-  
-          <a href="{% url 'pesquisa' %}" id="pesquisar-link">
-              <li>Pesquisar</li>
-          </a>
-  
-          <a href="{% url 'login' %}" id="login-link">
-              <li>Login</li>
-          </a>
-  
-          <a href="{% url 'cadastro' %}" id="cadastro-link">
-              <li>Cadastro</li>
-          </a>
-      </ul>
-  </navbar>
+    </ul>
+  </nav>
   
 </header>
 <section>
@@ -233,14 +226,8 @@ adorocinema@gmail.com
         <a href="https://jovempan.com.br/">
             <p>
              joven pan
-                </p>
-             
+                </p> 
         </a>
-        <a href="https://bandnewstv.uol.com.br/">   
-    <p>
-        Band news
-   </p>
-  </a>
 </div>
 <div>
 </h1>
@@ -301,5 +288,7 @@ adorocinema@gmail.com
 </footer>
 
 </section>
+
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

@@ -13,49 +13,51 @@
 <body>
 <header>
 
-    <img class='img1' src="{% static 'imgs/logo.png'%}" alt="Descrição da Imagem">
-    <navbar class='navbar'>
-        <ul>
-            <a href="{% url 'pagina_inicial' %}" id="home-link">
-                <li> Home<li>
-            </a>
-    
-            <a href="{% url 'emcartaz' %}" id="cartaz-link">
-                <li> Em Cartaz<li>
-            </a>
-    
-            <a href="{% url 'embreve' %}" id="breve-link">
-                <li>Em Breve <li>
-            </a>
-    
-            <a href="{% url 'pesquisa' %}" id="pesquisar-link">
-                <li>Pesquisar</li>
-            </a>
-    
-            <a href="{% url 'login' %}" id="login-link">
-                <li>Login</li>
-            </a>
-    
-            <a href="{% url 'cadastro' %}" id="cadastro-link">
-                <li>Cadastro</li>
-            </a>
+    <nav>
+        <img class='img1' src="{% static 'imgs/logo.png'%}" alt="Descrição da Imagem">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="{% url 'pagina_inicial' %}">Home</a></li>
+          <li><a href="{% url 'emcartaz' %}">Em Cartaz</a></li>
+          <li><a href="{% url 'embreve' %}">Em breve</a></li>
+          <li><a href="{% url 'pesquisa' %}">Pesquisar</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li style="color: white;">Bem-vindo, {{ user.username }}!</li>
+          {% else %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+          {% endif %}
+          <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+
         </ul>
-    </navbar>
+      </nav>
   
 </header>
 <section>
     <div class='flex'>
         <div> 
-            <img class='img' src="{% static 'imgs/01.jpeg'%}" alt="Descrição da Imagem">
+            <a href="https://www.youtube.com/watch?v=Wx4lSM5o0qY" target="_blank" rel="noopener noreferrer">
+                <img class='img' src="{% static 'imgs/01.jpeg'%}" alt="Descrição da Imagem">
+            </a>
         </div>
         <div> 
-            <img class='img' src="{% static 'imgs/download.jpeg'%}" alt="Descrição da Imagem">
+            <a href="https://www.youtube.com/watch?v=qX2XsPq-bNE" target="_blank" rel="noopener noreferrer">
+                <img class='img' src="{% static 'imgs/download.jpeg'%}" alt="Descrição da Imagem">
+            </a>
         </div>
         <div> 
-            <img class='img' src="{% static 'imgs/02.jpeg'%}" alt="Descrição da Imagem">
+            <a href="https://www.youtube.com/watch?v=u-HjfQ4am88" target="_blank" rel="noopener noreferrer">
+                <img class='img' src="{% static 'imgs/02.jpeg'%}" alt="Descrição da Imagem">
+            </a>
         </div>
         <div> 
-            <img class='img' src="{% static 'imgs/03.jpeg'%}" alt="Descrição da Imagem">
+            <a href="https://www.youtube.com/watch?v=23ouaygFB1U" target="_blank" rel="noopener noreferrer">
+                <img class='img' src="{% static 'imgs/03.jpeg'%}" alt="Descrição da Imagem">
+            </a>
         </div>
         <div>
             <h2 class='fonts'>
@@ -183,11 +185,6 @@ la casa de papel
          joven pan
     </p>
     
-    <a href="https://bandnewstv.uol.com.br/">
-        
-    <p>
-        Band news
-   </p>
 </div>
 <div>
 </h1>
@@ -251,6 +248,8 @@ estrelas
 
 </section>
 
+<script src="{% static 'js/script.js' %}"></script>
 <script src="{% static 'js/home.js' %}"></script>
+
 </body>
 </html>

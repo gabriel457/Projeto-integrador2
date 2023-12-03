@@ -55,3 +55,15 @@ body {
     /* Adicione outros estilos conforme necessário para os resultados da pesquisa */
 }
 
+/* Adicione ao seu arquivo pesquisa.css */
+.movie-result {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.add-to-favorites {
+    margin-top: 10px;
+}
+
+
