@@ -74,3 +74,6 @@ def usuarios(request):
 #@login_required
 def pesquisa(request):
     return render(request, 'pesquisa/pesquisa.html')
+
+def favoritos(request):
+    return render(request, 'favoritos/favoritos.html')

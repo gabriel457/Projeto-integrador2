@@ -171,6 +171,70 @@ function getFavorites() {
     return favorites;
 }
 
+function loadFavorites() {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    console.log('Favoritos:', favorites);
+
+    const favoritesList = document.getElementById('favoritesList');
+
+    // Limpa a lista de favoritos antes de carregar os novos
+    favoritesList.innerHTML = '';
+
+    // Verifica se há favoritos
+    if (favorites.length > 0) {
+        // Itera sobre os favoritos e cria elementos de lista para cada um
+        favorites.forEach(movieId => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Filme ID: ${movieId}`;
+
+            // Adiciona o item à lista de favoritos
+            favoritesList.appendChild(listItem);
+        });
+    } else {
+        // Se não houver favoritos, exibe uma mensagem indicando isso
+        const noFavoritesMessage = document.createElement('p');
+        noFavoritesMessage.textContent = 'Nenhum filme favorito encontrado.';
+        favoritesList.appendChild(noFavoritesMessage);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Outras funções e código existente...
+
+    // Chama a função loadFavorites quando a página é carregada
+    loadFavorites();
+});
+
+// Função para carregar e exibir os favoritos
+function loadFavorites() {
+    // Recupera a lista de favoritos do localStorage
+    let favorites = getFavorites();
+
+    // Seleciona o elemento da lista de favoritos
+    const favoritesList = document.getElementById('favoritesList');
+
+    // Limpa o conteúdo atual da lista
+    favoritesList.innerHTML = '';
+
+    // Verifica se há filmes favoritos
+    if (favorites.length > 0) {
+        // Itera sobre a lista de favoritos e os exibe na lista
+        favorites.forEach(favorite => {
+            const listItem = document.createElement('li');
+            listItem.textContent = favorite;
+            favoritesList.appendChild(listItem);
+        });
+    } else {
+        // Caso não haja favoritos, exibe uma mensagem
+        const message = document.createElement('p');
+        message.textContent = 'Nenhum filme favorito encontrado.';
+        favoritesList.appendChild(message);
+    }
+}
+
+
+
+
 
 
 

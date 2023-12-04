@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right,  #8A2BE2, #000000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#favoritesList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.movieItem {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.movieItem:hover {
+    transform: scale(1.05);
+}
+
+.movieItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.movieDetails {
+    padding: 20px;
+    text-align: center;
+}
+
+.movieTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff4081;
+}
+
+.movieOverview {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Adicionando um efeito de gradiente para um visual mais elegante */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right,  #8A2BE2, #000000);
+}
+
+/* Adaptações para telas menores */
+@media (max-width: 768px) {
+    #favoritesList {
+        grid-template-columns: 1fr;
+    }
+}
+
+.removeForm {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.removeForm input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.removeForm label {
+    color: #ff4081;
+    cursor: pointer;
+}
+
