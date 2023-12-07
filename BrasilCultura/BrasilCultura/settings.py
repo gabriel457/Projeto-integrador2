@@ -12,10 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5r-s+e_f(uj&y7hpilvhyqvz@bo!76@n@md5&a_h%3i#tvtl&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['https://catalogofilmesbr.online/', 'localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '195.35.40.229',
+]
 
 # Application definition
 

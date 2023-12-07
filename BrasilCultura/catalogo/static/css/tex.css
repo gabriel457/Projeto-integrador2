@@ -16,7 +16,8 @@ header {
 }
 
 .img {
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
     border-radius: 30px;
 }
 
