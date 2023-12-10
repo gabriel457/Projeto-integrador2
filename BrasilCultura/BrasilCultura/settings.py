@@ -12,11 +12,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5r-s+e_f(uj&y7hpilvhyqvz@bo!76@n@md5&a_h%3i#tvtl&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = ['https://catalogofilmesbr.online/', 'localhost']
 ALLOWED_HOSTS = [
-    '195.35.40.229',
+    '*',
 ]
 
 # Application definition
@@ -125,4 +125,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Especifique o caminho des
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'login/login.html'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Ou 'django.contrib.sessions.backends.cache' para usar cache
+SESSION_COOKIE_AGE = 1209600  # Tempo de expiração do cookie de sessão em segundos (2 semanas, por exemplo)
 

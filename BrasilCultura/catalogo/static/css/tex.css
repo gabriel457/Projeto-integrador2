@@ -10,8 +10,8 @@ header {
 .flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    padding-top: 20px;
+    gap: 1%;
+    padding: 3.5em 0px 3.5em 1em;
     margin: 0 auto;
 }
 
@@ -19,17 +19,18 @@ header {
     width: 100%;
     max-width: 300px;
     border-radius: 30px;
+    height: auto;
 }
 
 body {
     background: linear-gradient(to right,  #8A2BE2, #000000);
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 .img1 {
     width: 10%;
-    padding-left: 10px;
-    
+    padding-left: 10px;   
 }
 
 .navbar {
@@ -65,11 +66,11 @@ h1::before {
 footer {
     background-color: #000000;
     color: white;
-    margin-left: -10px;
     padding-left: 10px;
     height: 60vh;
-    margin-bottom: -10px;
     width: 98vw;
+    margin: 20px 0px -10px -10px;
+    z-index: 100;
 }
 
 .flex1 {
@@ -100,7 +101,7 @@ p {
   }
 
   .nav-list li:hover {
-    border-color: #ffcc00; /* Cor da borda ao passar o mouse */
+    border-color: #ffcc00; 
 }
   
   .mobile-menu {
@@ -156,6 +157,9 @@ a:hover {
     .flex {
         grid-template-columns: 1fr;
         margin: 0 auto;
+    }
+    footer {
+      margin-top: 32em;
     }
 }
   
